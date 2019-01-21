@@ -1,6 +1,29 @@
 #home-main{
 	padding: 0px;
+	.home-section{
+		margin-top: 6em;
+    	margin-bottom: 10em;
 
+    	.header{
+    		padding-bottom: 3em;
+    		.head-title{
+    			padding-top: 0.7em;
+    			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    				color: #7b7b80;
+    				font-weight: 600;
+    			}
+    		}
+    	}
+    	.body-content{
+    		.right-content{
+    			line-height: 2em;
+    			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{font-weight: 600;}
+    			p{
+    				padding-top: 1em;
+    			}
+    		}
+    	}
+	}
 	#home-slider{
 		background-image: url("../images/banner/banner.jpg");
 		background-size: cover;
@@ -45,7 +68,7 @@
 		    			background-color: $brand-color;
 		    		}
 		    		&.title{
-					    padding: 1em 3em;
+					    padding: 1em 0.5em;
 		    		}
 		    		&.icon{
 		    			height: 90px;
@@ -64,10 +87,13 @@
 		    		.icon svg .cls-1{fill: $brand-color};
 		    		.control-inner li{
 		    			&.title, &.icon, &.title-excerpt{
-						    max-width: 220px;
+						    max-width: 250px;
 			    		}
 			    		&.icon, &.title-excerpt{
 			    			background-color: #fff;
+			    		}
+			    		&.title{
+						    padding: 1em 3em;
 			    		}
 			    		&.title-excerpt{
 			    			color: #000;
