@@ -1,0 +1,39 @@
+header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .navbar-dark .navbar-nav .nav-link{
+        color: #ffffff;
+        padding-right: 1rem;
+        padding-left: 1rem;
+
+        &:hover{
+            color: $brand-color;
+        }
+    }
+
+    .dropdown-menu{
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        border: none;
+        margin: 0;
+    }
+
+    .dropdown-item{
+        padding-left: 1rem;
+        color: #ffffff;
+        font-size: 14px;
+
+        &:hover{
+            color: $brand-color;
+            background-color: transparent;
+        }
+    }
+}
+.btn-rounded img{
+    width: 18px;
+}

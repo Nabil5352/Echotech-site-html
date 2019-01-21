@@ -1,0 +1,80 @@
+/* common CSS*/
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin: 0;
+    font-weight: 400;
+}
+.hidden{display: none;}
+.display_flex{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    &.flex_center{
+        align-items: center;
+        justify-content: center;
+    }
+    &.flow_column{
+        flex-flow: column wrap;
+    }
+}
+.btn:focus, .custom-control-input:focus ~ .custom-control-label::before, .btn.focus {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border-color: #ededed;
+}
+.container {
+    max-width: 1410px !important;
+}
+.form-control:focus{
+    -webkit-box-shadow: 0px 0px 4px 0px #bedfff !important; ;
+    box-shadow: 0px 0px 4px 0px #bedfff !important; ;
+    border-color: #c3e1ff;
+}
+.btn-main{
+    background: $brand-color;
+    color: #fff;
+    border-radius: 0;
+    outline: none;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+}
+.btn-rounded{
+    border-radius: 3rem;
+    border-color: #ffffff;
+}
+.btn-rounded:hover,.btn-rounded:focus{
+    border-color: #00b894;
+    background-color: transparent;
+    color: #ffffff;
+}
+.dropdown .dropdown-menu {
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+
+    max-height: 0;
+    display: block;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    max-height: 200px;
+    opacity: 1;
+}
+
+/* End common CSS*/
