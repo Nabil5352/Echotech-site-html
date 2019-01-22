@@ -1,0 +1,157 @@
+//- Indicator style
+@mixin timeline-indicator {
+	content: "";
+	display: inline-block;
+	width: 5px;
+    height: 5px;
+    position: absolute;
+    border-radius: 50%;
+    left: -1em;
+    top: 1.5em;
+}
+
+@mixin timeline-entry {
+	@for $i from 1 through 5 {
+		&:nth-child(#{$i}) {
+			grid-area: entry#{$i};
+		}
+	}
+}
+
+//timeline image
+@for $i from 1 through 5 {
+	.timeline_#{$i}:before {
+		background-image: url(../images/icon/our_process_#{$i}.svg);
+	    background-repeat: no-repeat;
+	    background-size: 25px;
+	    background-position: center center;
+	    content: "";
+	    width: 45px;
+	    height: 45px;
+	    background-color: $brand-color;
+	    border-radius: 50%;
+	    position: absolute;
+	    left: -4.5em;
+	    z-index: 1;
+	}
+}
+
+
+//- Mobile First Timeline - stacked for small viewports and browsers that don't support grid
+.timeline {
+	line-height: 1.5em;
+	font-size: 14px;
+	transition: all .4s ease;
+	position: relative;
+	width: 50%;
+    margin: 0 auto;
+	counter-reset: section;
+	
+	//- indicator line
+	&:before {
+		content:"";
+		width: 4px;
+		height: 83%;
+		background: $brand-color;
+		position: absolute;
+		top: 0;
+		left: -3.313em;
+		border-radius: 40px 40px;
+	}
+}
+
+.timeline--entry {
+	position: relative;
+	text-align: justify;
+	&__counter {
+		&:before {
+			content: "";
+			color: #E5E5E5;
+		    position: absolute;
+		    content: counter(section);
+		    counter-increment: section;
+		    left: -1em;
+		    font-size: 50px;
+		    font-weight: 400;
+		    top: 0.3em;
+		}
+	}
+	&:nth-child(1){
+
+	}
+	.circle:nth-child(1){animation-delay: 0s;}
+	.circle:nth-child(2){animation-delay: 1s;}
+	.circle:nth-child(3){animation-delay: 2s;}
+	.circle:nth-child(4){animation-delay: 3s;}
+	&__title {
+		font-size: 1rem;
+		padding: 1em 0em;
+		font-weight: 700;
+		&:before {
+			@include timeline-indicator;
+			left: -1em;
+			background: $brand-color;
+		}
+	}
+	
+	&__detail {
+		margin: 0;
+	}
+
+	.circle {
+      border-radius: 50%;
+      background-color: $brand-color;
+      width: 45px;
+      height: 45px;
+      position: absolute;
+      opacity: 0;
+      animation: scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32);
+    }
+		
+}
+
+//- Tablet Up Screens Layout if CSS Grid is supported
+@supports (display: grid) {
+	@include tablet-up {
+		.timeline {
+			display: grid;
+			grid-gap: 0em 16em;
+			grid-template-areas:
+			".  entry1"
+			"entry2  ."
+			". entry3"
+			"entry4 ."
+			". entry5";
+			//- Timeline line
+			&:before {
+				left: 52.5%;
+			}
+		}
+		
+		.timeline--entry {
+				@include timeline-entry;
+				&:nth-of-type(odd){
+					.circle,
+					&:before {
+						left: -135px;
+					}
+				}
+				&:nth-of-type(even){
+					.timeline--entry__title {
+						&:before {
+							left: 104% ;
+						}
+					}
+					.timeline--entry__counter {
+						&:before {
+							left: 110% ;
+						}
+					}
+					.circle,
+					&:before {
+						left: 135%;
+					}
+				}	
+			}
+		}
+	}

@@ -14,6 +14,7 @@ ul{
 }
 img{max-width: 100%;}
 .hidden{display: none;}
+.absolute{position: absolute;}
 .display_flex{
     display: -webkit-box;
     display: -moz-box;
@@ -78,4 +79,18 @@ img{max-width: 100%;}
     opacity: 1;
 }
 
+.custom-pagination{
+    position: absolute;
+    ul{
+        li{
+            width: 5px;
+            height: 5px;
+            background: rgba($brand-color-r,$brand-color-g,$brand-color-b,0.5);
+            border-radius: 50%;
+            margin: 0.4em;
+            z-index: 55;
+            &.active{background: $brand-color;}
+        }
+    }
+}
 /* End common CSS*/

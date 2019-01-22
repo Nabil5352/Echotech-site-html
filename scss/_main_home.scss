@@ -38,6 +38,10 @@
 	    	position: relative;
     		top: -138px;
 	    }
+	    .custom-pagination{
+	    	right: 1em;
+    		top: 40%;
+	    }
 	    .control{
 	    	position: absolute;
 	    	width: 100%;
@@ -111,5 +115,30 @@
 	    		}
 	    	}
 	    }
+	}
+	#home-masterpieces{
+		padding-bottom: 6em;
+		position: relative;
+
+		#master-slider{
+			position: relative;
+			.item{
+				.img-wrapper{
+					position: relative;
+					img.mobile-img{
+					    right: 1em;
+					    bottom: -3em;
+					}
+				}
+			}
+		}
+		.custom-pagination{
+			bottom: 0;
+			left: 45%;
+			ul li{
+				display: inline-block;
+				margin: 0.2em;
+			}
+		}
 	}
 }
