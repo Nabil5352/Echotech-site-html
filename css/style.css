@@ -10,6 +10,20 @@
     opacity: 0;
   }
 }
+@keyframes glow-grow {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
 /* common CSS*/
 body {
   font-family: "Open Sans", sans-serif;
@@ -68,6 +82,22 @@ img {
   -webkit-box-shadow: 0px 0px 4px 0px #bedfff !important;
   box-shadow: 0px 0px 4px 0px #bedfff !important;
   border-color: #c3e1ff;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+     supported by Chrome and Opera */
 }
 
 .btn-main {
@@ -284,11 +314,112 @@ header .dropdown-item:hover {
 }
 #home-main #home-masterpieces .custom-pagination {
   bottom: 0;
-  left: 45%;
+  left: 49%;
 }
 #home-main #home-masterpieces .custom-pagination ul li {
   display: inline-block;
   margin: 0.2em;
+}
+#home-main #home-testimonial #testimonial-slider {
+  cursor: url("../images/icon/resize-horizontal.png"), auto;
+}
+#home-main #home-testimonial #testimonial-slider .body {
+  padding: 0% 3%;
+  line-height: 1.7em;
+  font-size: 16px;
+}
+#home-main #home-testimonial #testimonial-slider .body .item {
+  display: none;
+}
+#home-main #home-testimonial #testimonial-slider .body .item.active {
+  display: block;
+}
+#home-main #home-testimonial #testimonial-slider .person {
+  margin-top: 4%;
+  position: relative;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item {
+  display: inline-block;
+  vertical-align: top;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item + .person-item {
+  margin-left: 1%;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item img {
+  height: 50px;
+  opacity: 0.5;
+  border-radius: 50%;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item span {
+  display: list-item;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item span.person-img {
+  display: table-cell;
+  vertical-align: middle;
+  height: 70px;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item span.person-name {
+  font-size: 1.5em;
+  top: 80px;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item span.person-compnay {
+  top: 113px;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item span.person-name,
+#home-main #home-testimonial #testimonial-slider .person .person-item span.person-compnay {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item.active img {
+  height: 70px;
+  opacity: 1;
+}
+#home-main #home-testimonial #testimonial-slider .person .person-item.active span.person-name,
+#home-main #home-testimonial #testimonial-slider .person .person-item.active span.person-compnay {
+  display: list-item;
+}
+#home-main #home-clients {
+  background: #00b894;
+  padding: 6em 0em;
+}
+#home-main #home-clients #clients-slider {
+  cursor: url("../images/icon/resize-horizontal.png"), auto;
+  position: relative;
+}
+#home-main #home-clients #clients-slider .item {
+  display: inline-block;
+  vertical-align: top;
+}
+#home-main #home-clients #clients-slider .item + .item {
+  margin-left: 1.5em;
+}
+#home-main #home-clients #clients-slider .item .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 134px;
+  background: #fff;
+}
+#home-main #home-clients #clients-slider .item .img-wrapper + .img-wrapper {
+  margin-top: 1.5em;
+}
+#home-main #home-clients .slider-control {
+  padding-top: 2em;
+}
+#home-main #home-clients .slider-control .left {
+  margin-right: 0.7em;
+}
+#home-main #home-clients .slider-control .left, #home-main #home-clients .slider-control .right {
+  cursor: pointer;
+  display: inline;
+}
+#home-main #home-clients .slider-control .left img, #home-main #home-clients .slider-control .right img {
+  display: none;
+}
+#home-main #home-clients .slider-control .left img.active, #home-main #home-clients .slider-control .right img.active {
+  display: inline;
 }
 
 .timeline_1:before {

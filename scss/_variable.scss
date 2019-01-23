@@ -13,6 +13,9 @@ $brand-color-b: 148;
 //- Global Functions
 
 //- Global Mixins
+@mixin slider_cursor{
+	cursor: url("../images/icon/resize-horizontal.png"), auto;
+}
 
 /*media queries*/
 @mixin tablet {
