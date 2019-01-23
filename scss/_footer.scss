@@ -1,0 +1,29 @@
+footer{
+	margin: 6em 0em 6em;
+	a, a:hover, a:focus, a:visited{
+		text-decoration: none;
+		color: $brand-color;
+	}
+	.menu-item{
+		.wrapper{
+			max-width: 50%;
+    		margin: 0 auto;
+		}
+		.title{
+			font-weight: 600;
+    		padding-bottom: 1em;
+		}
+		.socials{
+			li{
+				display: inline;
+				&+li{margin-left: 2em;}
+			}
+		}
+	}
+	.copyright{
+		width: 100%;
+	    text-align: center;
+	    margin-top: 5em;
+	    .copyright-text{color: #a7a7a7;}
+	}
+}

@@ -6,6 +6,7 @@ $desktop-width: 1024px;
 $open-sans: 'Open Sans';
 //- Colors
 $brand-color: #00b894;
+$button_bg_brand_color: #7ADAC8;
 $brand-color-r: 0;
 $brand-color-g: 184;
 $brand-color-b: 148;
@@ -13,8 +14,45 @@ $brand-color-b: 148;
 //- Global Functions
 
 //- Global Mixins
+@mixin reset_input{
+  input, button, textarea{
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+}
+@mixin default_input_height{
+  input, button, textarea{
+    height: 38px;
+  }
+}
 @mixin slider_cursor{
 	cursor: url("../images/icon/resize-horizontal.png"), auto;
+}
+@mixin circle_animation($size, $bg-color, $animation){
+	.circle {
+      border-radius: 50%;
+      background-color: $bg-color;
+      width: $size;
+      height: $size;
+      position: absolute;
+      opacity: 1;
+      animation: $animation;
+    }
+  .circle:nth-child(1){animation-delay: 0s;}
+	.circle:nth-child(2){animation-delay: 1s;}
+	.circle:nth-child(3){animation-delay: 2s;}
+	.circle:nth-child(4){animation-delay: 3s;}
+}
+@mixin map_animation($bg-color, $animation){
+  .circle_country{
+      background-color: $bg-color;
+      animation: $animation;
+    }
+  .circle_country:nth-child(1){animation-delay: 0s;}
+  .circle_country:nth-child(2){animation-delay: 1s;}
+  .circle_country:nth-child(3){animation-delay: 2s;}
+  .circle_country:nth-child(4){animation-delay: 3s;}
 }
 
 /*media queries*/

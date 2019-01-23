@@ -12,6 +12,7 @@ ul{
     margin: 0;
     font-weight: 400;
 }
+button{cursor: pointer;}
 img{max-width: 100%;}
 .hidden{display: none;}
 .absolute{position: absolute;}
@@ -25,6 +26,9 @@ img{max-width: 100%;}
     &.flex_center{
         align-items: center;
         justify-content: center;
+    }
+    &.flow_row{
+        flex-flow: row wrap;
     }
     &.flow_column{
         flex-flow: column wrap;

@@ -1,5 +1,6 @@
 #home-main{
 	padding: 0px;
+	// all section common css
 	.home-section{
 		margin-top: 6em;
     	margin-bottom: 10em;
@@ -24,6 +25,7 @@
     		}
     	}
 	}
+	// top slider
 	#home-slider{
 		background-image: url("../images/banner/banner.jpg");
 		background-size: cover;
@@ -116,6 +118,7 @@
 	    	}
 	    }
 	}
+	// masterpieces section
 	#home-masterpieces{
 		padding-bottom: 6em;
 		position: relative;
@@ -141,6 +144,7 @@
 			}
 		}
 	}
+	// testimonials section
 	#home-testimonial{
 		#testimonial-slider{
 			@include slider_cursor;
@@ -198,6 +202,7 @@
 			}
 		}
 	}
+	// clients section
 	#home-clients{
 		background: $brand-color;
     	padding: 6em 0em;
@@ -232,5 +237,182 @@
     			}
     		}
     	}
+	}
+	// tools section
+	#home-tools{
+		#tools-slider{
+			.item {
+			    display: inline-block;
+    			vertical-align: top;
+    			&+.item{margin-left: 1em;}
+			    .img-wrapper{
+    				display: flex;
+				    justify-content: center;
+				    align-items: center;
+				    height: 121px;
+				    background: #fff;
+				    border: 1px solid #f7f7f7;
+				    padding: 0em 2.5em;
+    			}
+			}
+		}
+	}
+	// work history
+	#home-work-history{
+		.tab-headers{
+			position: relative;
+			ul li{
+				color: #8f8f90;
+				display: inline-block;
+				vertical-align: top;
+				padding: 0em 2em;
+				position: relative;
+				border-top: 3px solid #e6e6e6;
+				&+li{margin-left: 17px;}
+				&:before{
+					content: "";
+				    display: inline-block;
+				    width: 5px;
+				    height: 5px;
+				    position: absolute;
+				    border-radius: 50%;
+					left: -12px;
+					top: -4px;
+				    background: #e6e6e6;
+				}
+				.title{padding: 0.5em 0em;}
+				&.active{
+					color: $brand-color;
+					border-top: 3px solid $brand-color;
+					&:before{
+					    opacity: 0;
+					}
+					@include circle_animation(8px, $brand-color, scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32));
+					.circle{
+						left: -13.7px;
+    					top: -5.29px;
+					}
+				}
+			}
+		}
+		.tab-panel{
+			display: none;
+			padding-top: 2em;
+			&.active{display: block;}
+			.tab-info{
+				.number{
+					font-size: 40px;
+					font-weight: 700;
+    				color: $brand-color;
+				}
+				.info{
+					font-size: 17px;
+				}
+			}
+		}
+	}
+	//Subscribe
+	#subscribe{
+		height: 725px;
+		background-image: url("../images/footer_city.png");
+		background-repeat: no-repeat;
+    	background-position: center bottom;
+    	margin-bottom: 0em;
+
+    	.body-content{
+    		padding-top: 4em;
+    		@include reset_input;
+    		.subscribe-group{
+    			align-items: center;
+    			justify-content: center;
+
+    			@include default_input_height;
+    			input{
+				    border-bottom: 1px solid #3ac6aa;
+				    width: 30%;
+    			}
+    			button{
+    				background: $brand-color;
+    				color: #fff;
+    				width: 108px;
+    			}
+    		}
+    	}
+	}
+	//Contact
+	#contact{
+		height: 790px;
+		color: #fff;
+		background-color: $brand-color;
+		position: relative;
+		@include reset_input;
+		@include default_input_height;
+		::placeholder{
+			color: #fff;
+		}
+		.contact-wrapper{
+			padding-top: 6%;
+			.head-title h6, .bottom-info h6{
+				font-size: 17px;
+				font-weight: 700;
+			}
+			.body-content{
+				.wrapper{padding: 2em 0em;}
+				input, textarea{
+					background: transparent;
+					border-bottom: 1px solid #3ac6aa;
+				}
+				input.one-row-input{
+					width: 31%;
+					&+input.one-row-input{margin-left: 1em;}
+				}
+				button{
+    				background: $button_bg_brand_color;
+    				color: #fff;
+    				width: 108px;
+    			}
+    			.contact-group{
+    				padding-top: 5em;
+    				textarea{
+    					width: 80%;
+    					background: $brand-color;
+    					z-index: 1;
+    				}
+    			}
+			}
+			.bottom-info{
+				position: absolute;
+			    bottom: 9%;
+			    left: 0;
+			    right: 0;
+			    line-height: 2em;
+			    font-weight: 700;
+			    .offices, .email{margin-top: 2.5em;}
+			    .offices{
+			    	.item{
+			    		display: inline-block;
+			    		vertical-align: top;
+			    		width: 400px;
+			    		.location{font-weight: 400;}
+			    		&+.item{margin-left: 4em;}
+			    	}
+			    }
+			    .email a{
+			    	color: #fff;
+    				text-decoration: none;
+			    }
+			}
+			.bg-map{
+				position: absolute;
+			    bottom: 20%;
+			    left: 0;
+			    right: 0;
+				svg#world_map_footer{
+					height: 250px;
+					position: relative;
+				}
+				@include map_animation($brand-color, scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32));
+			}
+		}
 	}
 }
