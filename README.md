@@ -1,4 +1,4 @@
-# HELLO :smile:
+# WELCOME :smile:
 # SETUP
 ###### Local Server :zap:
 - Sometimes without server image/js files can't be loaded due to **CORS** issue.
