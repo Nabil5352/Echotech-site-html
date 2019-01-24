@@ -1,13 +1,18 @@
 footer{
 	margin: 6em 0em 6em;
-	a, a:hover, a:focus, a:visited{
-		text-decoration: none;
-		color: $brand-color;
-	}
 	.menu-item{
 		.wrapper{
 			max-width: 50%;
     		margin: 0 auto;
+    		text-align: left;
+    		&.social-wrapper{
+    			@include mobile {
+					text-align: center;
+				}
+    		}
+    		@include mobile {
+				max-width: 100%;
+			}
 		}
 		.title{
 			font-weight: 600;

@@ -33,6 +33,9 @@
 	    position: absolute;
 	    left: -4.5em;
 	    z-index: 1;
+	    @include mobile{
+			display: none;
+		}
 	}
 }
 
@@ -46,7 +49,9 @@
 	width: 50%;
     margin: 0 auto;
 	counter-reset: section;
-	
+	@include mobile{
+		width: 80%;
+	}
 	//- indicator line
 	&:before {
 		content:"";
@@ -57,12 +62,26 @@
 		top: 0;
 		left: -3.313em;
 		border-radius: 40px 40px;
+		@include mobile{
+			display: none;
+		}
 	}
 }
 
 .timeline--entry {
 	position: relative;
 	text-align: justify;
+	@include mobile{
+		text-align: center !important;
+	}
+	.mobile-position{
+		@include mobile{
+			position: relative;
+		    display: block;
+		    width: 100%;
+		    height: 100px;
+		}
+	}
 	&__counter {
 		&:before {
 			content: "";
@@ -74,6 +93,9 @@
 		    font-size: 50px;
 		    font-weight: 400;
 		    top: 0.3em;
+		    @include mobile{
+				display: none;
+			}
 		}
 	}
 	&:nth-child(1){
@@ -84,9 +106,12 @@
 		padding: 1em 0em;
 		font-weight: 700;
 		&:before {
-			@include timeline-indicator;
 			left: -1em;
 			background: $brand-color;
+			@include timeline-indicator;
+			@include mobile{
+				display: none;
+			}
 		}
 	}
 	
@@ -95,6 +120,14 @@
 	}
 	
 	@include circle_animation(45px, $brand-color, scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32));	
+	.circle{
+		@include mobile{
+			left: 0;
+		    right: 0;
+		    top: 25%;
+		    margin: 0 auto;
+		}
+	}
 }
 
 //- Tablet Up Screens Layout if CSS Grid is supported

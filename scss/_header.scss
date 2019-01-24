@@ -4,7 +4,11 @@ header{
     top: 0;
     left: 0;
     z-index: 1;
-
+    .navbar-brand{
+        @include mobile{
+            height: 50px;
+        }
+    }
     .navbar-dark .navbar-nav .nav-link{
         color: #ffffff;
         padding-right: 1rem;
@@ -31,6 +35,13 @@ header{
         &:hover{
             color: $brand-color;
             background-color: transparent;
+        }
+    }
+    .navbar-toggler{
+        @include mobile{
+            border: none;
+            background: transparent;
+            outline: none;
         }
     }
 }

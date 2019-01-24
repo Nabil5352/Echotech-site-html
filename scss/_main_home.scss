@@ -4,13 +4,19 @@
 	.home-section{
 		margin-top: 6em;
     	margin-bottom: 10em;
-
+    	@include mobile{
+    		margin-top: 2em;
+    		margin-bottom: 5em;
+    	}
     	.header{
     		padding-bottom: 3em;
+    		@include mobile{
+    			padding-bottom: 2em;
+    		}
     		.head-title{
     			padding-top: 0.7em;
     			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
-    				color: #7b7b80;
+    				color: $text-grey-1;
     				font-weight: 600;
     			}
     		}
@@ -34,15 +40,34 @@
 	    padding-top: 101px;
 	    color: #fff;
 	    position: relative;
+	    @include mobile{
+	    	padding-top: 80px;
+	    }
 
 	    .container, .wrapper{height: 100%;}
 	    .center-content{
 	    	position: relative;
     		top: -138px;
+    		@include mobile{
+    			top: 0px;
+    		}
 	    }
 	    .custom-pagination{
 	    	right: 1em;
     		top: 40%;
+    		@include mobile{
+    			bottom: 1em;
+			    right: 0;
+			    left: 0;
+			    top: auto;
+    		}
+    		ul li{
+    			@include mobile{
+    				margin: 0.1em;
+				    z-index: 55;
+				    display: inline-block;
+    			}
+    		}
 	    }
 	    .control{
 	    	position: absolute;
@@ -59,6 +84,9 @@
 			    bottom: 0;
 			    background: $brand-color;
 			    z-index: 0;
+			    @include mobile{
+			    	display: none;
+			    }
 		    }
 		    ul li.control-item{
 		    	display: inline-block;
@@ -72,6 +100,9 @@
 		    		}
 		    		&.icon, &.title-excerpt{
 		    			background-color: $brand-color;
+		    			@include mobile{
+		    				background-color: #fff;
+		    			}
 		    		}
 		    		&.title{
 					    padding: 1em 0.5em;
@@ -87,10 +118,13 @@
 		    		&.title-excerpt{
 		    			height: 140px;
 		    			padding: 15px 5px 10px;
+		    			@include mobile{
+					    	display: none;
+					    }
 		    		}
 		    	}
 		    	&.active{
-		    		.icon svg .cls-1{fill: $brand-color};
+		    		.icon svg .cls-1{fill: $brand-color;};
 		    		.control-inner li{
 		    			&.title, &.icon, &.title-excerpt{
 						    max-width: 250px;
@@ -114,15 +148,83 @@
 	    		.item-content{
 	    			margin-bottom: 1.5em;
 	    			padding: 0% 15%;
+	    			@include mobile{
+	    				padding: 0% 5%;
+	    			}
+	    			img{
+	    				@include mobile{
+	    					max-height: 200px;
+	    				}
+	    			}
+	    		}
+	    		.title.item-content h2{
+	    			@include mobile{
+	    				font-size: 17px;
+    					line-height: 1.5em;
+	    			}
+	    		}
+	    		.subtitle.item-content h5{
+	    			@include mobile{
+	    				font-size: 11px;
+	    			}
 	    		}
 	    	}
 	    }
 	}
+	// mobile-control
+	#mobile-control{
+		li.control-item {
+		    width: 50%;
+		    display: inline-block;
+		    vertical-align: top;
+		    text-align: center;
+		    min-height: 150px;
+
+		    .icon{
+			    display: table-cell;
+			    vertical-align: middle;
+		    }
+		    .title{height: 50px;}
+		    .icon{height: 100px;}
+		}
+		li.control-item svg {
+		    height: 50px;
+		}
+		li.control-item svg  .cls-1{
+		    fill: $brand-color;
+		}
+	}
+	// home info
+	#home-info{
+		.left-content, .right-content{
+			@include mobile{
+				text-align: center !important;
+			}
+		}
+		.right-content{
+			h4{text-decoration: underline;}
+			p{
+				line-height: 2.2em;
+				margin-top: 1em;
+			}
+			@include mobile{
+				padding-top: 3em;
+			}
+		}
+	}
 	// masterpieces section
 	#home-masterpieces{
-		padding-bottom: 6em;
+		padding-top: 6em;
+		padding-bottom: 15em;
 		position: relative;
-
+		background-color: $bg-grey-1;
+		@include mobile{
+			padding-top: 3em;
+			padding-bottom: 7em;
+		}
+		.header{
+			padding-bottom: 2em;
+		}
 		#master-slider{
 			position: relative;
 			.item{
@@ -133,11 +235,43 @@
 					    bottom: -3em;
 					}
 				}
+				.excerpt-info{
+					display: block;
+    				padding-top: 3em;
+    				color: $text-grey-1;
+					.left, .right{
+						width: 50%;
+						float: left;
+					}
+					.left .year span, .right .company{
+						font-size: 1.5em;
+					}
+				}
+			}
+			.left-content, .right-content{
+				@include mobile{
+					text-align: center !important;
+				}
+			}
+			.right-content{
+				h4{text-decoration: underline;}
+				p{
+					line-height: 2.2em;
+					margin-top: 1em;
+				}
+				@include mobile{
+					padding-top: 5em;
+				}
 			}
 		}
 		.custom-pagination{
-			bottom: 0;
-			left: 49%;
+			bottom: 5em;
+			left: 0;
+		    right: 0;
+		    text-align: center;
+		    @include mobile{
+		    	bottom: 3em;
+		    }
 			ul li{
 				display: inline-block;
 				margin: 0.2em;
@@ -146,6 +280,9 @@
 	}
 	// testimonials section
 	#home-testimonial{
+		@include mobile{
+			padding-bottom: 5em;
+		}
 		#testimonial-slider{
 			@include slider_cursor;
 			.body{
@@ -161,6 +298,9 @@
 			.person{
 				margin-top: 4%;
 				position: relative;
+				@include mobile{
+					margin-top: 10%;
+				}
 				.person-item{
 					display: inline-block;
 					vertical-align: top;
@@ -214,14 +354,29 @@
     		.item{
     			display: inline-block;
     			vertical-align: top;
-    			&+.item{margin-left: 1.5em;}
+    			@include mobile{
+    				display: list-item;
+    				list-style: none;
+    			}
+    			&+.item{
+    				margin-left: 1.5em;
+    				@include mobile{
+    					margin-left: 0em;
+    					margin-top: 1em;
+    				}
+    			}
     			.img-wrapper{
     				display: flex;
 				    justify-content: center;
 				    align-items: center;
 					height: 134px;
 					background: #fff;
-					&+.img-wrapper{margin-top: 1.5em;}
+					&+.img-wrapper{
+						margin-top: 1.5em;
+						@include mobile{
+	    					margin-top: 1em;
+	    				}
+					}
     			}
     		}
     	}
@@ -244,7 +399,16 @@
 			.item {
 			    display: inline-block;
     			vertical-align: top;
-    			&+.item{margin-left: 1em;}
+    			margin: 1em 0em;
+    			@include mobile{
+			    	margin: 0.5em 0em;
+			    }
+    			&+.item{
+    				margin-left: 1em;
+    				@include mobile{
+				    	margin-left: 0em;
+				    }
+    			}
 			    .img-wrapper{
     				display: flex;
 				    justify-content: center;
@@ -253,6 +417,9 @@
 				    background: #fff;
 				    border: 1px solid #f7f7f7;
 				    padding: 0em 2.5em;
+				    @include mobile{
+				    	min-width: 206px;
+				    }
     			}
 			}
 		}
@@ -298,7 +465,21 @@
 		.tab-panel{
 			display: none;
 			padding-top: 2em;
+			@include mobile{
+				display: block;
+				padding-top: 0;
+			}
+			.mobile-title{
+				font-size: 16px;
+			    font-weight: 700;
+			    padding-bottom: 1em;
+			}
 			&.active{display: block;}
+			&+.tab-panel{
+				@include mobile{
+					margin-top: 2em;
+				}
+			}
 			.tab-info{
 				.number{
 					font-size: 40px;
@@ -307,6 +488,15 @@
 				}
 				.info{
 					font-size: 17px;
+				}
+				& > div:not(last-child){
+					@include mobile{
+	    				padding-bottom: 1em;
+					}
+				}
+				@include mobile{
+					border: 1px solid #e6e6e6;
+    				padding: 1em;
 				}
 			}
 		}
@@ -318,10 +508,15 @@
 		background-repeat: no-repeat;
     	background-position: center bottom;
     	margin-bottom: 0em;
-
+    	@include mobile{
+    		height: 400px;
+    	}
     	.body-content{
     		padding-top: 4em;
     		@include reset_input;
+    		@include mobile{
+    			padding-top: 2em;
+    		}
     		.subscribe-group{
     			align-items: center;
     			justify-content: center;
@@ -330,13 +525,22 @@
     			input{
 				    border-bottom: 1px solid #3ac6aa;
 				    width: 30%;
+				    @include mobile{
+				    	width: 70%;
+				    }
     			}
     			button{
     				background: $brand-color;
     				color: #fff;
     				width: 108px;
+    				@include mobile{
+    					width: 30%;
+    				}
     			}
     		}
+    	}
+    	@include mobile{
+    		background-size: contain;
     	}
 	}
 	//Contact
@@ -345,10 +549,13 @@
 		color: #fff;
 		background-color: $brand-color;
 		position: relative;
-		@include reset_input;
-		@include default_input_height;
 		::placeholder{
 			color: #fff;
+		}
+		@include reset_input;
+		@include default_input_height;
+		@include mobile{
+			height: 330px;
 		}
 		.contact-wrapper{
 			padding-top: 6%;
@@ -393,8 +600,20 @@
 			    		display: inline-block;
 			    		vertical-align: top;
 			    		width: 400px;
+			    		@include mobile{
+			    			display: list-item;
+			    			list-style: none;
+						    text-align: center !important;
+						    width: 100%;
+			    		}
 			    		.location{font-weight: 400;}
-			    		&+.item{margin-left: 4em;}
+			    		&+.item{
+			    			margin-left: 4em;
+			    			@include mobile{
+			    				margin-left: 0em;
+			    				margin-top: 2em;
+			    			}
+			    		}
 			    	}
 			    }
 			    .email a{
@@ -407,9 +626,15 @@
 			    bottom: 20%;
 			    left: 0;
 			    right: 0;
+			    @include mobile{
+			    	bottom: 55%;
+			    }
 				svg#world_map_footer{
 					height: 250px;
 					position: relative;
+					@include mobile{
+						height: 120px;
+					}
 				}
 				@include map_animation($brand-color, scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32));
 			}
