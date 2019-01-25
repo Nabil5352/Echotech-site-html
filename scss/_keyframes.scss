@@ -22,3 +22,9 @@
     opacity: 0;
   }
 }
+@keyframes dot-ripple{
+  to{
+    opacity:0;
+    transform:scale(6)
+  }
+}

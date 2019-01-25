@@ -124,7 +124,10 @@
 		    		}
 		    	}
 		    	&.active{
-		    		.icon svg .cls-1{fill: $brand-color;};
+		    		.icon svg .cls-1{
+		    			fill: $brand-color;
+		    			opacity: 1;
+		    		};
 		    		.control-inner li{
 		    			&.title, &.icon, &.title-excerpt{
 						    max-width: 250px;
@@ -175,23 +178,22 @@
 	#mobile-control{
 		li.control-item {
 		    width: 50%;
-		    display: inline-block;
-		    vertical-align: top;
 		    text-align: center;
-		    min-height: 150px;
+		    min-height: 140px;
+		    float: left;
 
-		    .icon{
-			    display: table-cell;
-			    vertical-align: middle;
+		    .title{
+		    	color: $text-grey-1;
+		    	height: 50px;
 		    }
-		    .title{height: 50px;}
-		    .icon{height: 100px;}
+		    .icon{height: 80px;}
 		}
 		li.control-item svg {
 		    height: 50px;
 		}
 		li.control-item svg  .cls-1{
 		    fill: $brand-color;
+		    opacity: 1;
 		}
 	}
 	// home info
@@ -497,6 +499,7 @@
 				@include mobile{
 					border: 1px solid #e6e6e6;
     				padding: 1em;
+    				flex-flow: column;
 				}
 			}
 		}
@@ -629,14 +632,43 @@
 			    @include mobile{
 			    	bottom: 55%;
 			    }
-				svg#world_map_footer{
+			    .bg-map-wrapper{
+			    	position: relative;
+			    	width: 719px;
+			    	width: max-content;
+				    margin: 0 auto;
+				    @include mobile{
+						width: 719px;
+			    		width: max-content;
+					}
+					#bd_office{
+						right: 27%;
+					    top: 40%;
+					}
+				    #uk_office{
+				    	left: 47%;
+    					top: 18%;
+				    }
+				    #bd_office,
+				    #uk_office{
+				    	position: absolute;
+					    width: auto;
+					    height: auto;
+					    height: auto;
+					    background: #FFFFFF;
+					    min-width: 5px;
+					    min-height: 5px;
+					    border-radius: 50%;
+					    @include map_animation(5px, #FFFFFF, dot-ripple 5s linear infinite);
+				    }
+			    }
+				#world_map_footer{
 					height: 250px;
 					position: relative;
 					@include mobile{
 						height: 120px;
 					}
 				}
-				@include map_animation($brand-color, scaleIn 4s infinite cubic-bezier(.36, .11, .89, .32));
 			}
 		}
 	}
