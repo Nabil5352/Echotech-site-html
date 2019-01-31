@@ -248,7 +248,7 @@ header .dropdown-item:hover {
   padding-top: 1em;
 }
 #home-main #home-slider {
-  background-image: url("../images/banner/banner.jpg");
+  background-image: url("../../images/banner/banner.jpg");
   background-size: cover;
   height: 800px;
   height: 100vh;
@@ -317,6 +317,8 @@ header .dropdown-item:hover {
 #home-main #home-slider .control ul li.control-item {
   display: inline-block;
   position: relative;
+  vertical-align: bottom;
+  margin: 0;
   z-index: 5;
 }
 #home-main #home-slider .control ul li.control-item .control-inner li.title, #home-main #home-slider .control ul li.control-item .control-inner li.icon, #home-main #home-slider .control ul li.control-item .control-inner li.title-excerpt {
@@ -338,7 +340,7 @@ header .dropdown-item:hover {
   height: 90px;
   padding: 20px 0px;
 }
-#home-main #home-slider .control ul li.control-item .control-inner li.icon svg {
+#home-main #home-slider .control ul li.control-item .control-inner li.icon img, #home-main #home-slider .control ul li.control-item .control-inner li.icon svg {
   height: 50px;
 }
 #home-main #home-slider .control ul li.control-item .control-inner li.title-excerpt {
@@ -404,7 +406,7 @@ header .dropdown-item:hover {
 #home-main #mobile-control li.control-item .icon {
   height: 80px;
 }
-#home-main #mobile-control li.control-item svg {
+#home-main #mobile-control li.control-item img, #home-main #mobile-control li.control-item svg {
   height: 50px;
 }
 #home-main #mobile-control li.control-item svg .cls-1 {
@@ -767,16 +769,8 @@ header .dropdown-item:hover {
   }
 }
 #home-main #subscribe {
-  height: 725px;
-  background-image: url("../images/footer_city.png");
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  margin-bottom: 0em;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #home-main #subscribe {
-    height: 400px;
-  }
+  height: 200px;
+  margin-top: 6em;
 }
 #home-main #subscribe .body-content {
   padding-top: 4em;
@@ -817,13 +811,21 @@ header .dropdown-item:hover {
     width: 30%;
   }
 }
+#home-main #bg-footer-main {
+  height: 450px;
+  background-image: url("../../images/footer_city.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  margin-bottom: 0em;
+}
 @media (min-width: 320px) and (max-width: 767px) {
-  #home-main #subscribe {
+  #home-main #bg-footer-main {
+    height: 200px;
     background-size: contain;
   }
 }
 #home-main #contact {
-  height: 790px;
+  height: 350px;
   color: #fff;
   background-color: #00b894;
   position: relative;
@@ -877,7 +879,13 @@ header .dropdown-item:hover {
   background: #00b894;
   z-index: 1;
 }
-#home-main #contact .contact-wrapper .bottom-info {
+#home-main #bg-footer-map {
+  position: relative;
+  color: #fff;
+  height: 350px;
+  background-color: #00b894;
+}
+#home-main #bg-footer-map .bottom-info {
   position: absolute;
   bottom: 9%;
   left: 0;
@@ -885,71 +893,71 @@ header .dropdown-item:hover {
   line-height: 2em;
   font-weight: 700;
 }
-#home-main #contact .contact-wrapper .bottom-info .offices, #home-main #contact .contact-wrapper .bottom-info .email {
+#home-main #bg-footer-map .bottom-info .offices, #home-main #bg-footer-map .bottom-info .email {
   margin-top: 2.5em;
 }
-#home-main #contact .contact-wrapper .bottom-info .offices .item {
+#home-main #bg-footer-map .bottom-info .offices .item {
   display: inline-block;
   vertical-align: top;
   width: 400px;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #home-main #contact .contact-wrapper .bottom-info .offices .item {
+  #home-main #bg-footer-map .bottom-info .offices .item {
     display: list-item;
     list-style: none;
     text-align: center !important;
     width: 100%;
   }
 }
-#home-main #contact .contact-wrapper .bottom-info .offices .item .location {
+#home-main #bg-footer-map .bottom-info .offices .item .location {
   font-weight: 400;
 }
-#home-main #contact .contact-wrapper .bottom-info .offices .item + .item {
+#home-main #bg-footer-map .bottom-info .offices .item + .item {
   margin-left: 4em;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #home-main #contact .contact-wrapper .bottom-info .offices .item + .item {
+  #home-main #bg-footer-map .bottom-info .offices .item + .item {
     margin-left: 0em;
     margin-top: 2em;
   }
 }
-#home-main #contact .contact-wrapper .bottom-info .email a {
+#home-main #bg-footer-map .bottom-info .email a {
   color: #fff;
   text-decoration: none;
 }
-#home-main #contact .contact-wrapper .bg-map {
+#home-main #bg-footer-map .bg-map {
   position: absolute;
   bottom: 20%;
   left: 0;
   right: 0;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #home-main #contact .contact-wrapper .bg-map {
-    bottom: 55%;
+  #home-main #bg-footer-map .bg-map {
+    bottom: 45%;
   }
 }
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper {
+#home-main #bg-footer-map .bg-map .bg-map-wrapper {
   position: relative;
   width: 719px;
   width: max-content;
   margin: 0 auto;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #home-main #contact .contact-wrapper .bg-map .bg-map-wrapper {
+  #home-main #bg-footer-map .bg-map .bg-map-wrapper {
     width: 719px;
     width: max-content;
   }
 }
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #bd_office {
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #bd_office {
   right: 27%;
   top: 40%;
 }
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #uk_office {
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #uk_office {
   left: 47%;
   top: 18%;
 }
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #bd_office,
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #uk_office {
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #bd_office,
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #uk_office {
   position: absolute;
   width: auto;
   height: auto;
@@ -959,8 +967,8 @@ header .dropdown-item:hover {
   min-height: 5px;
   border-radius: 50%;
 }
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #bd_office .circle,
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #uk_office .circle {
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #bd_office .circle,
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #uk_office .circle {
   border-radius: 50%;
   background-color: #FFFFFF;
   width: 5px;
@@ -969,16 +977,16 @@ header .dropdown-item:hover {
   opacity: 1;
   animation: dot-ripple 5s linear infinite;
 }
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #bd_office .circle:nth-child(1),
-#home-main #contact .contact-wrapper .bg-map .bg-map-wrapper #uk_office .circle:nth-child(1) {
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #bd_office .circle:nth-child(1),
+#home-main #bg-footer-map .bg-map .bg-map-wrapper #uk_office .circle:nth-child(1) {
   animation-delay: 0s;
 }
-#home-main #contact .contact-wrapper .bg-map #world_map_footer {
+#home-main #bg-footer-map .bg-map #world_map_footer {
   height: 250px;
   position: relative;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #home-main #contact .contact-wrapper .bg-map #world_map_footer {
+  #home-main #bg-footer-map .bg-map #world_map_footer {
     height: 120px;
   }
 }
