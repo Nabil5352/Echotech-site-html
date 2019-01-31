@@ -75,6 +75,17 @@ img {
   flex-flow: column;
 }
 
+.btn {
+  background-color: #00b894;
+  width: 214px;
+  height: 38px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 0px;
+}
+
 .btn:focus, .custom-control-input:focus ~ .custom-control-label::before, .btn.focus {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;

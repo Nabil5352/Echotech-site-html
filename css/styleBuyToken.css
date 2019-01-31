@@ -75,6 +75,17 @@ img {
   flex-flow: column;
 }
 
+.btn {
+  background-color: #00b894;
+  width: 214px;
+  height: 38px;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  color: #fff;
+  border-radius: 0px;
+}
+
 .btn:focus, .custom-control-input:focus ~ .custom-control-label::before, .btn.focus {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
@@ -210,10 +221,6 @@ header .dropdown-item:hover {
   width: 18px;
 }
 
-header, .dropdown .dropdown-menu {
-  background: rgba(0, 0, 0, 0.8);
-}
-
 #buy-token {
   background-image: url("../../images/buy_token_bg.jpg");
   background-position: top center;
@@ -242,6 +249,102 @@ header, .dropdown .dropdown-menu {
   font-size: 16px;
   font-weight: 400;
   margin-top: 0.7em;
+}
+#buy-token #buy-token-section #packages {
+  margin-top: 6em;
+  margin-bottom: 5em;
+}
+#buy-token #buy-token-section #packages .package {
+  background: #fff;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  vertical-align: top;
+  max-width: 330px;
+  width: 100%;
+  min-height: 550px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+#buy-token #buy-token-section #packages .package .package-header {
+  background: #e3fffa;
+  padding: 1.5em 0.5em;
+  font-size: 17.5px;
+  font-weight: 700;
+}
+#buy-token #buy-token-section #packages .package .package-header span {
+  display: list-item;
+  list-style: none;
+}
+#buy-token #buy-token-section #packages .package .package-wrapper {
+  padding: 3em 1em;
+}
+#buy-token #buy-token-section #packages .package .package-wrapper .package-body {
+  padding: 0em 3em 1.5em;
+}
+#buy-token #buy-token-section #packages .package .package-wrapper .package-body ul li.text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 2em;
+}
+#buy-token #buy-token-section #packages .package .package-wrapper .package-body ul li.text:not(:last-child) {
+  border-bottom: 1px solid #f7f7f7;
+}
+#buy-token #buy-token-section #packages .package .package-wrapper .package-price span {
+  display: list-item;
+  list-style: none;
+}
+#buy-token #buy-token-section #packages .package .package-wrapper .package-price span.amount {
+  font-size: 51px;
+  font-weight: 700;
+}
+#buy-token #buy-token-section #packages .package .package-type {
+  color: #7b7b80;
+  margin-top: 0.5em;
+}
+#buy-token #buy-token-section #packages .package .sticker {
+  background-color: #00b894;
+  height: 150px;
+  width: 150px;
+  right: -75px;
+  top: -100px;
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#buy-token #buy-token-section #packages .package .sticker span {
+  color: #fff;
+  left: 20px;
+  bottom: 10px;
+  position: absolute;
+  width: 150px;
+  font-size: 13px;
+  font-weight: 600;
+}
+#buy-token #buy-token-section #packages .package.solo-package ul li {
+  display: inline-block;
+}
+#buy-token #buy-token-section #packages .package.solo-package ul li.input-box {
+  padding: 0em 0.7em;
+}
+#buy-token #buy-token-section #packages .package.solo-package ul li.input-box input {
+  border-style: solid;
+  border-width: 1px;
+  border-color: #eeeeee;
+  border-bottom: 1px solid #00b894;
+  width: 130px;
+  height: 37px;
+  padding-left: 0.5em;
+}
+#buy-token #buy-token-section #packages .package.business-package {
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  min-height: 570px;
+  margin-top: -10px;
+  z-index: 5;
+}
+#buy-token #buy-token-section #packages .package.business-package .package-header {
+  padding: 2em 0.5em;
 }
 
 footer {

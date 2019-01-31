@@ -13,6 +13,7 @@ $brand-color-g: 184;
 $brand-color-b: 148;
 $text-grey-1: #7b7b80;
 $bg-grey-1: #F7F7F7;
+$package-header-bg: #e3fffa;
 
 //- Global Functions
 
@@ -28,6 +29,11 @@ $bg-grey-1: #F7F7F7;
   input, button, textarea{
     height: 38px;
   }
+}
+@mixin do_transform($property){
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
 }
 @mixin slider_cursor{
 	cursor: url("../images/icon/resize-horizontal.png"), auto;
