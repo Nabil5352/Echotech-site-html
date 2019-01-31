@@ -234,6 +234,11 @@ header .dropdown-item:hover {
 #buy-token #buy-token-section .logo-wrapper {
   padding-top: 8em;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section .logo-wrapper {
+    padding-top: 1em;
+  }
+}
 #buy-token #buy-token-section .logo-wrapper img.buy_token_logo {
   background: #fff;
   border-radius: 50%;
@@ -245,14 +250,29 @@ header .dropdown-item:hover {
   font-weight: 300;
   margin-top: 1em;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section .logo-wrapper .title {
+    font-size: 25px;
+  }
+}
 #buy-token #buy-token-section .logo-wrapper .subtitle {
   font-size: 16px;
   font-weight: 400;
   margin-top: 0.7em;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section .logo-wrapper .subtitle {
+    font-size: 14px;
+  }
+}
 #buy-token #buy-token-section #packages {
   margin-top: 6em;
   margin-bottom: 5em;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section #packages {
+    margin-top: 4em;
+  }
 }
 #buy-token #buy-token-section #packages .package {
   background: #fff;
@@ -265,6 +285,15 @@ header .dropdown-item:hover {
   position: relative;
   overflow: hidden;
   z-index: 1;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section #packages .package {
+    display: list-item;
+    list-style: none;
+    margin-bottom: 1.5em;
+    max-width: 100%;
+    min-height: 510px;
+  }
 }
 #buy-token #buy-token-section #packages .package .package-header {
   background: #e3fffa;
@@ -279,8 +308,18 @@ header .dropdown-item:hover {
 #buy-token #buy-token-section #packages .package .package-wrapper {
   padding: 3em 1em;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section #packages .package .package-wrapper {
+    padding: 2em 1em;
+  }
+}
 #buy-token #buy-token-section #packages .package .package-wrapper .package-body {
   padding: 0em 3em 1.5em;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section #packages .package .package-wrapper .package-body {
+    padding: 0em 0em 1em;
+  }
 }
 #buy-token #buy-token-section #packages .package .package-wrapper .package-body ul li.text {
   font-size: 16px;
@@ -322,6 +361,11 @@ header .dropdown-item:hover {
   font-size: 13px;
   font-weight: 600;
 }
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section #packages .package.solo-package {
+    min-height: 370px;
+  }
+}
 #buy-token #buy-token-section #packages .package.solo-package ul li {
   display: inline-block;
 }
@@ -345,6 +389,12 @@ header .dropdown-item:hover {
 }
 #buy-token #buy-token-section #packages .package.business-package .package-header {
   padding: 2em 0.5em;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #buy-token #buy-token-section #packages .package.business-package {
+    min-height: 510px;
+    margin-top: 0px;
+  }
 }
 
 footer {
