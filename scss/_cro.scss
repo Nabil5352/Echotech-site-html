@@ -1,0 +1,315 @@
+#cro{
+	@mixin timeline_image{
+		background-repeat: no-repeat;
+	    background-size: 88px;
+	    background-position: center center;
+	    background-color: #ffffff;
+	    border-radius: 50%;
+	    border: 2px dotted $brand-color;
+	    box-shadow: 0px 0px 57px 0px rgba(0, 0, 0, 0.09);
+	    content: "";
+	    height: 144px;
+	    width: 144px;
+	    z-index: 5;
+	    position: absolute;
+	}
+
+    background-image: url("../../images/bg_circle.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 101px;
+
+    // all section common css
+	.home-section{
+		margin-top: 6em;
+    	margin-bottom: 10em;
+    	@include mobile{
+    		margin-top: 2em;
+    		margin-bottom: 5em;
+    	}
+    	.header{
+    		padding-bottom: 3em;
+    		@include mobile{
+    			padding-bottom: 2em;
+    		}
+    		.head-title{
+    			padding-top: 0.7em;
+    			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    				color: $text-grey-1;
+    				font-weight: 600;
+    			}
+    		}
+    	}
+	}
+
+    #what-is-cro{
+    	padding-top: 3em;
+    	.title{
+    		font-size: 30px;
+    		font-weight: 300;
+    	}
+    	.subtitle{
+    		margin-top: 44px;
+    		margin-bottom: 30px;
+    		font-size: 17px;
+    		font-weight: 700;
+    	}
+    	.text-excerpt{
+    		font-size: 14px;
+			font-weight: 600;
+			line-height: 26px;
+			margin-bottom: 5em;
+    	}
+    	.conversion-pyramid{
+    		display: inline-block;
+    		vertical-align: bottom;
+    	}
+    }
+    #research-trends{
+    	.section-hero {
+		    height: 100px;
+		    width: 100%;
+		}
+		.section-title{
+			font-size: 17px;
+			font-weight: 700;
+			margin-top: 40px;
+    		margin-bottom: 30px;
+		}
+		.section-info{
+			font-size: 14px;
+		    font-weight: 600;
+		    line-height: 28px;
+		    padding: 0em 1em;
+		}
+    }
+    #our-picks{
+    	line-height: 2em;
+    	.picks-title{
+    		font-size: 17px;
+			font-weight: 700;
+    	}
+    	.picks-info{
+    		font-size: 16px;
+			font-weight: 400;
+			margin: 40px 0px;
+    	}
+    	.picks-anchor{
+    		color: $brand-color;
+			font-size: 16px;
+			font-weight: 600;
+			text-decoration: underline;
+    	}
+    	.picks-left{
+    		height: 350px;
+    		.wrapper{
+    			height: 100%;
+    			justify-content: center;
+			    text-align: justify;
+    		}
+    	}
+    	.picks-right{
+    		img{max-height: 350px;}
+    	}
+    }
+
+    //timeline
+    #process-timeline{
+    	background-color: $bg-grey-1;
+    	padding: 6em 0em 18em;
+    	.header{
+    		.head-subtitle{
+    			font-size: 15px;
+    			font-weight: 600;
+    			line-height: 22px;
+    			padding: 3% 12%;
+    		}
+    	}
+    	.main-timeline{
+		    padding-top: 12em;
+		    position: relative;
+
+		    ul li{position: relative;}
+		    &:before, &:after{
+			    left: 42%;
+			    @include timeline_image;
+			}
+			&:before{
+				background-image: url(../images/icon/cro_timeline_1.png);
+			    top: 8%;
+			}
+			&:after{
+			    background-image: url(../images/icon/cro_timeline_5.png);
+			    bottom: -6%;
+			}
+
+			.timeline{
+			    padding: 35px 0;
+			    margin-top: -2px;
+			    position: relative;
+			    z-index: 1;
+
+			    &:after{
+				    content: '';
+				    height: 100%;
+				    width: 50%;
+				    border-radius: 100px 0 0 100px;
+				    border: 2px dotted $brand-color;
+				    border-right: none;
+				    position: absolute;
+				    left: 0;
+				    top: 0;
+				    z-index: -1;
+		    		width: calc(50% - 5px);
+				}
+				&:nth-child(odd),
+				&:nth-child(even){
+					ul{
+						font-size: 15px;
+						font-weight: 600;
+						line-height: 2em;
+						margin-top: 1em;
+
+						li{
+							padding-left: 1em;
+
+							&::before,
+							&::after{
+								position: absolute;
+							    top: 14px;
+							    vertical-align: middle;
+							    width: 5px;
+							    height: 5px;
+							    border-radius: 50%;
+							    background: #A8A8A8;
+							    content: "";
+							}
+						}
+					}
+				}
+				&:nth-child(odd){
+					text-align: left;
+					ul{
+						li{
+							padding-left: 1em;
+							&::before{
+							    left: 0;
+							}
+						}
+					}
+				}
+				&:nth-child(even){
+					text-align: right;
+					ul{
+					    li{
+							padding-right: 1em;
+							&::after{
+							    right: 0;
+							}
+						}
+					}
+					&:before{
+					    left: auto;
+					    right: 0;
+					    border-radius: 0 100px 100px 0;
+					    border: 2px dotted $brand-color;
+					    border-left: none;
+					}
+					&:after{
+					    left: auto;
+					    right: 12px;
+					    border: 2px dotted $brand-color;
+					    border-left: none;
+					    border-radius: 0 100px 100px 0;
+					}
+				}
+				&:nth-child(1){
+					ul li::after{background: transparent;}
+					.timeline-content:before{
+						background-image: url(../images/icon/cro_timeline_2.png);
+					    left: -4%;
+    					top: 20%;
+					    @include timeline_image;
+					}
+				}
+				&:nth-child(2){
+					ul li::before{background: transparent;}
+					.timeline-content:after{
+						background-image: url(../images/icon/cro_timeline_3.png);
+					    right: -4%;
+    					top: 30%;
+					    @include timeline_image;
+					}
+				}
+				&:nth-child(3){
+					padding: 35px 0 200px;
+					ul li::after{background: transparent;}
+					.timeline-content:before{
+						background-image: url(../images/icon/cro_timeline_4.png);
+					    left: -5%;
+    					top: 27%;
+					    @include timeline_image;
+					}
+				}
+
+				&:nth-child(1) .content{
+					padding: 0% 0% 0% 5%;
+					&:nth-child(1){
+						margin-top: 1.5%;
+						padding-left: 9%;
+					}
+					&:nth-child(2){
+						margin-top: -12%;
+					}
+				}
+				&:nth-child(2) .content{
+					padding: 0% 9% 0% 0%;
+				}
+				&:nth-child(3) .content{
+					padding: 0% 0% 0% 5%;
+					&:nth-child(1){
+						margin-bottom: -13%;
+						padding-left: 9%;
+					}
+					&:nth-child(2){
+						position: absolute;
+			    		bottom: -50%;
+					}
+				}
+			}
+			.timeline-content{ 
+				display:inline-block; 
+				&:hover{ text-decoration: none; }
+			}
+			.timeline-icon{
+				display: inline-block;
+			    position: absolute;
+			    left: 5%;
+			    top: 25%;
+	    		width: 45%;
+			}
+			.content{
+			    width: 50%;
+			    display: inline-block;
+			    font-size: 15px;
+
+			    .title{
+				    text-transform: uppercase;
+				    font-size: 17px;
+					font-weight: 700;
+					line-height: 19px;
+					padding-bottom: 20px;
+				}
+				.description{
+				    font-size: 15px;
+				    letter-spacing: 1px;
+				    line-height: 28px;
+				    margin: 0;
+				}
+			}
+			
+		}
+    }
+
+}
