@@ -1,0 +1,145 @@
+#abtest{
+	.header{
+		padding-bottom: 3em;
+		@include mobile{
+			padding-bottom: 2em;
+		}
+		.head-title{
+			padding-top: 0.7em;
+			.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+				color: $text-grey-1;
+				font-weight: 600;
+			}
+		}
+		.head-subtitle{
+			font-size: 14px;
+			font-weight: 600;
+			padding-top: 50px;
+		}
+	}
+
+	#hero{
+		background-image: url("../../images/abtest_bg.jpg");
+	    background-position: top center;
+	    background-repeat: no-repeat;
+	    background-size: cover;
+	    padding-top: 101px;
+
+	    .hero-header{
+	    	.title{
+	    		font-size: 30px;
+				font-weight: 300;
+	    	}
+	    	.subtitle{
+	    		font-size: 14px;
+				font-weight: 400;
+				padding: 45px 0px;
+	    	}
+	    }
+	    .estimate-btn{
+	    	padding-bottom: 25px;
+	    }
+	}
+	#what-is-abtest{
+		padding: 5em 0em;
+		.bottom-image{
+			img{
+				background: $brand-color;
+				border-radius: 50%;
+				padding: 2em;
+			}
+		}
+	}
+	#why-abtest{
+		padding: 5em 0em;
+	}
+	#areas{
+		background-color: $bg-grey-1;
+		padding: 5em 0em;
+
+		.body-content{
+			.right-content{
+				line-height: 28px;
+				justify-content: center;
+
+				.list-item{
+					ul{
+						margin-left: 20px;
+						li::before {
+						  content: "\2022";
+						  color: $text-grey-1;
+						  font-weight: bold;
+						  display: inline-block;
+						  width: 1em;
+						  margin-left: -20px;
+						}
+					}
+				}
+			}
+		}
+	}
+	#mid-banner{
+		background-image: url("../../images/banner/mid_banner.jpg");
+	    background-position: left center;
+	    background-repeat: no-repeat;
+	    background-size: contain;
+	    height: 443px;
+	    .container, .wrapper{height: 100%;}
+	    .wrapper{
+	    	position: relative;
+	    	.top-list{
+	    		color: #fff;
+	    		position: absolute;
+			    top: -12%;
+			    width: 100%;
+			    left: 0;
+			    right: 0;
+
+			    ul{
+			    	justify-content: space-around;
+    				flex-wrap: nowrap;
+
+    				li{
+					    display: inline-block;
+					    span{
+					    	display: list-item;
+					    	list-style: none;
+					    	text-align: center;
+					    }
+					    .list-icon{
+					    	background: $bg-grey-1;
+						    border-radius: 50%;
+						    display: -webkit-box;
+					    	display: -moz-box;
+						    display: -ms-flexbox;
+						    display: -webkit-flex;
+						    display: flex;
+						    justify-content: center;
+	    					align-items: center;
+	    					margin-bottom: 0.4em;
+						    width: 111px;
+    						height: 110px;
+					    }
+				    }
+			    } 
+	    	}
+	    	.banner-content{
+	    		color: #fff;
+	    		text-align: center;
+	    		.title{
+	    			font-size: 30px;
+	    			font-weight: 700;
+	    		}
+	    		.excerpt{
+	    			font-size: 14px;
+	    			font-weight: 400;
+	    			padding: 25px 0px 50px;
+	    		}
+	    		.estimate-btn button{
+	    			font-size: 13px;
+	    			font-weight: 700;
+	    		}
+	    	}
+	    }
+	}
+}

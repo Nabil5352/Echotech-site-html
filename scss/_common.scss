@@ -53,6 +53,11 @@ img{
     border: none;
     color: #fff;
     border-radius: 0px;
+    &.btn-reverse{
+        background: #fff;
+        border: 1px solid $brand-color;
+        color: $brand-color;
+    }
 }
 .btn:focus, .custom-control-input:focus ~ .custom-control-label::before, .btn.focus {
     -webkit-box-shadow: none !important;

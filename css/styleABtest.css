@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*- Screen Sizes*/
 /*media queries*/
 /*fixed media query*/
@@ -227,180 +228,138 @@ header .dropdown-item:hover {
   width: 18px;
 }
 
-#buy-token {
-  background-image: url("../../images/bg_circle.jpg");
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-#buy-token #buy-token-section {
-  min-height: 476px;
-  padding-top: 101px;
-}
-#buy-token #buy-token-section .logo-wrapper {
-  padding-top: 8em;
+#abtest .header {
+  padding-bottom: 3em;
 }
 @media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section .logo-wrapper {
-    padding-top: 1em;
+  #abtest .header {
+    padding-bottom: 2em;
   }
 }
-#buy-token #buy-token-section .logo-wrapper img.buy_token_logo {
-  background: #fff;
-  border-radius: 50%;
-  padding: 2em;
-  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.1);
+#abtest .header .head-title {
+  padding-top: 0.7em;
 }
-#buy-token #buy-token-section .logo-wrapper .title {
-  font-size: 30px;
-  font-weight: 300;
-  margin-top: 1em;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section .logo-wrapper .title {
-    font-size: 25px;
-  }
-}
-#buy-token #buy-token-section .logo-wrapper .subtitle {
-  font-size: 16px;
-  font-weight: 400;
-  margin-top: 0.7em;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section .logo-wrapper .subtitle {
-    font-size: 14px;
-  }
-}
-#buy-token #buy-token-section #packages {
-  margin-top: 6em;
-  margin-bottom: 5em;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section #packages {
-    margin-top: 4em;
-  }
-}
-#buy-token #buy-token-section #packages .package {
-  background: #fff;
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  display: inline-block;
-  vertical-align: top;
-  max-width: 330px;
-  width: 100%;
-  min-height: 550px;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section #packages .package {
-    display: list-item;
-    list-style: none;
-    margin-bottom: 1.5em;
-    max-width: 100%;
-    min-height: 510px;
-  }
-}
-#buy-token #buy-token-section #packages .package .package-header {
-  background: #e3fffa;
-  padding: 1.5em 0.5em;
-  font-size: 17.5px;
-  font-weight: 700;
-}
-#buy-token #buy-token-section #packages .package .package-header span {
-  display: list-item;
-  list-style: none;
-}
-#buy-token #buy-token-section #packages .package .package-wrapper {
-  padding: 3em 1em;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section #packages .package .package-wrapper {
-    padding: 2em 1em;
-  }
-}
-#buy-token #buy-token-section #packages .package .package-wrapper .package-body {
-  padding: 0em 3em 1.5em;
-}
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section #packages .package .package-wrapper .package-body {
-    padding: 0em 0em 1em;
-  }
-}
-#buy-token #buy-token-section #packages .package .package-wrapper .package-body ul li.text {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 2em;
-}
-#buy-token #buy-token-section #packages .package .package-wrapper .package-body ul li.text:not(:last-child) {
-  border-bottom: 1px solid #f7f7f7;
-}
-#buy-token #buy-token-section #packages .package .package-wrapper .package-price span {
-  display: list-item;
-  list-style: none;
-}
-#buy-token #buy-token-section #packages .package .package-wrapper .package-price span.amount {
-  font-size: 51px;
-  font-weight: 700;
-}
-#buy-token #buy-token-section #packages .package .package-type {
+#abtest .header .head-title .h1, #abtest .header .head-title .h2, #abtest .header .head-title .h3, #abtest .header .head-title .h4, #abtest .header .head-title .h5, #abtest .header .head-title .h6, #abtest .header .head-title h1, #abtest .header .head-title h2, #abtest .header .head-title h3, #abtest .header .head-title h4, #abtest .header .head-title h5, #abtest .header .head-title h6 {
   color: #7b7b80;
-  margin-top: 0.5em;
-}
-#buy-token #buy-token-section #packages .package .sticker {
-  background-color: #00b894;
-  height: 150px;
-  width: 150px;
-  right: -75px;
-  top: -100px;
-  position: absolute;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
-#buy-token #buy-token-section #packages .package .sticker span {
-  color: #fff;
-  left: 20px;
-  bottom: 10px;
-  position: absolute;
-  width: 150px;
-  font-size: 13px;
   font-weight: 600;
 }
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section #packages .package.solo-package {
-    min-height: 370px;
-  }
+#abtest .header .head-subtitle {
+  font-size: 14px;
+  font-weight: 600;
+  padding-top: 50px;
 }
-#buy-token #buy-token-section #packages .package.solo-package ul li {
+#abtest #hero {
+  background-image: url("../../images/abtest_bg.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 101px;
+}
+#abtest #hero .hero-header .title {
+  font-size: 30px;
+  font-weight: 300;
+}
+#abtest #hero .hero-header .subtitle {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 45px 0px;
+}
+#abtest #hero .estimate-btn {
+  padding-bottom: 25px;
+}
+#abtest #what-is-abtest {
+  padding: 5em 0em;
+}
+#abtest #what-is-abtest .bottom-image img {
+  background: #00b894;
+  border-radius: 50%;
+  padding: 2em;
+}
+#abtest #why-abtest {
+  padding: 5em 0em;
+}
+#abtest #areas {
+  background-color: #F7F7F7;
+  padding: 5em 0em;
+}
+#abtest #areas .body-content .right-content {
+  line-height: 28px;
+  justify-content: center;
+}
+#abtest #areas .body-content .right-content .list-item ul {
+  margin-left: 20px;
+}
+#abtest #areas .body-content .right-content .list-item ul li::before {
+  content: "•";
+  color: #7b7b80;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -20px;
+}
+#abtest #mid-banner {
+  background-image: url("../../images/banner/mid_banner.jpg");
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 443px;
+}
+#abtest #mid-banner .container, #abtest #mid-banner .wrapper {
+  height: 100%;
+}
+#abtest #mid-banner .wrapper {
+  position: relative;
+}
+#abtest #mid-banner .wrapper .top-list {
+  color: #fff;
+  position: absolute;
+  top: -12%;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+#abtest #mid-banner .wrapper .top-list ul {
+  justify-content: space-around;
+  flex-wrap: nowrap;
+}
+#abtest #mid-banner .wrapper .top-list ul li {
   display: inline-block;
 }
-#buy-token #buy-token-section #packages .package.solo-package ul li.input-box {
-  padding: 0em 0.7em;
+#abtest #mid-banner .wrapper .top-list ul li span {
+  display: list-item;
+  list-style: none;
+  text-align: center;
 }
-#buy-token #buy-token-section #packages .package.solo-package ul li.input-box input {
-  border-style: solid;
-  border-width: 1px;
-  border-color: #eeeeee;
-  border-bottom: 1px solid #00b894;
-  width: 130px;
-  height: 37px;
-  padding-left: 0.5em;
+#abtest #mid-banner .wrapper .top-list ul li .list-icon {
+  background: #F7F7F7;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0.4em;
+  width: 111px;
+  height: 110px;
 }
-#buy-token #buy-token-section #packages .package.business-package {
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
-  min-height: 570px;
-  margin-top: -10px;
-  z-index: 5;
+#abtest #mid-banner .wrapper .banner-content {
+  color: #fff;
+  text-align: center;
 }
-#buy-token #buy-token-section #packages .package.business-package .package-header {
-  padding: 2em 0.5em;
+#abtest #mid-banner .wrapper .banner-content .title {
+  font-size: 30px;
+  font-weight: 700;
 }
-@media (min-width: 320px) and (max-width: 767px) {
-  #buy-token #buy-token-section #packages .package.business-package {
-    min-height: 510px;
-    margin-top: 0px;
-  }
+#abtest #mid-banner .wrapper .banner-content .excerpt {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 25px 0px 50px;
+}
+#abtest #mid-banner .wrapper .banner-content .estimate-btn button {
+  font-size: 13px;
+  font-weight: 700;
 }
 
 footer {
@@ -471,4 +430,4 @@ footer .copyright .copyright-text {
   }
 }
 
-/*# sourceMappingURL=styleBuyToken.css.map */
+/*# sourceMappingURL=styleABtest.css.map */
