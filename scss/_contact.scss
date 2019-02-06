@@ -1,0 +1,133 @@
+#contact-us{
+	background-color: $bg-grey-1;
+	padding-top: 101px;
+	#map{
+    	margin: 50px 0px 0px;
+    	@include mobile{
+    		margin: 0px;
+    	}
+		.map-wrapper{
+			height: 382px;
+			min-height: 382px;
+		    background-color: #fff;
+		    box-shadow: 0px 12px 46px 0px rgba(0, 0, 0, 0.3);
+		    position: relative;
+		    @include mobile{
+		    	flex-flow: column;
+		    }
+		    .office-img{
+		    	width: 243px;
+		    	background-color: $brand-color;
+		    	@include mobile{
+		    		width: 100%;
+    				height: 40%;
+		    	}
+		    }
+		    .gmap{width: 100%;}
+		}
+		.left-map{
+			padding-left: 0px;
+			.map-wrapper{
+				@include mobile{
+					justify-content: flex-end;
+				}
+			}
+		}
+		.right-map{
+			padding-right: 0px;
+		}
+		.left-map, .right-map{
+			@include mobile{
+				padding: 15px 0px;
+			}
+		}
+	}
+
+	#contact{
+		@include reset_input;
+		@include default_input_height;
+		color: $text-grey-2;
+		padding: 5% 0%;
+		background-color: transparent;
+		background-image: url("../../images/map_color.png");
+	    background-position: top center;
+	    background-repeat: no-repeat;
+	    background-size: auto;
+		::placeholder{
+			color: $text-grey-2;
+		}
+		@include mobile{
+			background-size: contain;
+		}
+		.contact-wrapper{
+			padding-top: 0%;
+			.head-title h6{
+				color: #000;
+				font-size: 29px;
+				font-weight: 700;
+			}
+			.body-content{
+				.wrapper{
+					width: 70%;
+					padding: 3em 0em;
+					@include mobile{width: 100%;}
+				}
+				.top-wrapper{
+					display: -webkit-box;
+				    display: -moz-box;
+				    display: -ms-flexbox;
+				    display: -webkit-flex;
+				    display: flex;
+					justify-content: space-between;
+					@include mobile{
+						flex-direction: column;
+					}
+				}
+				input, textarea{
+					background: #fff;
+					padding-left: 1em;
+					border-bottom: 1px solid #3ac6aa;
+					border: 1px solid #eeeeee;
+				}
+				input.one-row-input{
+					width: 31%;
+					&+input.one-row-input{
+						margin-left: 1em;
+						@include mobile{
+							margin-left: 0em;
+							margin-top: 1em;
+						}
+					}
+					@include mobile{
+						width: 100%;
+					}
+				}
+				button{
+    				background: $brand-color;
+    				color: #fff;
+    				margin: 0 auto;
+    				margin-top: 5em;
+    				width: 214px;
+    				font-size: 13px;
+    				@include mobile{
+						margin-top: 1em;
+						width: 100%;
+    				}
+    			}
+				.contact-group{
+					padding-top: 3.5em;
+					@include mobile{
+						padding-top: 1em;
+					}
+    				textarea{
+    					width: 100%;
+    					background: #fff;
+    					padding-top: 0.7em;
+    					min-height: 187px;
+    					z-index: 1;
+    				}
+    			}
+			}
+		}
+	}
+}
