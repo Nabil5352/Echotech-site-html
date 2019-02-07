@@ -20,6 +20,12 @@ $cro-page-bg: #DFFCF7;
 //- Global Functions
 
 //- Global Mixins
+@mixin padding_space{
+  padding: 5em 0em;
+  @include mobile{
+    padding: 3em 0em;
+  }
+}
 @mixin reset_input{
   input, button, textarea{
     border: none;

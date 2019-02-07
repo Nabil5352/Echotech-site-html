@@ -227,6 +227,91 @@ header .dropdown-item:hover {
   width: 18px;
 }
 
+#services {
+  background-color: #F7F7F7;
+  background-image: url("../../images/bg_circle.png");
+  background-position: top center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  min-height: 600px;
+  min-height: 100vh;
+  padding-top: 101px;
+  position: relative;
+}
+#services #service-hero, #services #service-hero .container, #services #service-hero .wrapper {
+  height: 100%;
+}
+#services #service-hero .wrapper {
+  background-image: url("../../images/service_hero_bg.png");
+  background-position: top center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: relative;
+}
+#services #service-hero .options {
+  width: 100%;
+  padding: 120px 0px 0px;
+  justify-content: space-between;
+}
+#services #service-hero .options .item {
+  width: 20%;
+  text-align: center;
+  padding-bottom: 50px;
+}
+#services #service-hero .options .item .title {
+  background-color: #F7F7F7;
+  padding: 1em 0em;
+  color: #a7a7a7;
+  font-size: 14px;
+  font-weight: 600;
+}
+#services #service-hero .options .item .icon {
+  padding: 2em 0em;
+}
+#services #service-hero .options .item .list {
+  display: none;
+  line-height: 25px;
+}
+#services #service-hero .options .item .list ul {
+  font-size: 15px;
+  font-weight: 600;
+}
+#services #service-hero .options .item.active {
+  background-color: #fff;
+}
+#services #service-hero .options .item.active .list {
+  display: block;
+}
+#services #service-hero .center-hero {
+  text-align: center;
+}
+#services #service-hero .center-hero .round-img-bg {
+  width: 236px;
+  height: 236px;
+  background: #fff;
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 100px auto;
+}
+#services #service-hero .center-hero .hero-text {
+  font-size: 30px;
+  font-weight: 300;
+}
+#services #service-hero .center-hero .hero-text span {
+  font-weight: 700;
+}
+#services #expertise {
+  padding: 5em 0em;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  #services #expertise {
+    padding: 3em 0em;
+  }
+}
+
 footer {
   margin: 6em 0em 6em;
 }
